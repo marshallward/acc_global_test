@@ -1,6 +1,12 @@
-FC=gfortran
-FCFLAGS=-fopenacc
-LDFLAGS=-fopenacc
+# Local build
+#FC=gfortran
+#FCFLAGS=-fopenacc
+#LDFLAGS=-fopenacc
+
+# HPC build
+FC=mpifort
+FCFLAGS=-acc
+LDFLAGS=-acc
 
 all: global
 

@@ -1,4 +1,4 @@
-use grid_mod, only : grid
+use grid_mod, only : grid, create_grid
 use loop_mod, only : loop_with_g
 
 implicit none
@@ -6,8 +6,7 @@ implicit none
 type(grid) :: G
 real, allocatable :: field(:,:)
 
-G%ni = 32
-G%nj = 64
+call create_grid(G, 64, 128)
 
 allocate(field(G%ni, G%nj))
 
