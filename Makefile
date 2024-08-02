@@ -6,6 +6,7 @@
 # HPC build
 FC=mpifort
 FCFLAGS=-acc
+#FCFLAGS=-acc -gpu=managed
 LDFLAGS=-acc
 
 all: global

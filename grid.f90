@@ -5,6 +5,8 @@ type :: grid
   integer :: ni
   integer :: nj
 
+  logical, allocatable :: mask(:,:)
+
   real, allocatable :: Idx(:,:)
   real, allocatable :: Idy(:,:)
 end type grid
@@ -21,6 +23,8 @@ subroutine create_grid(G, ni, nj)
 
   allocate(G%Idx(ni,nj))
   allocate(G%Idy(ni,nj))
+
+  allocate(G%mask(ni, nj))
 
   G%Idx(:,:) = 1. / ni
   G%Idy(:,:) = 1. / nj
