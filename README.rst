@@ -11,9 +11,7 @@ Hopefully the code itself is simple enough to understand without explanation.
 Test cases
 ----------
 
-1. ``!$acc kernels``, no other directives.
-
-   First try a simply kernel directive::
+1. ``!$acc kernels``, no other directives::
 
       !$acc kernels
       do j = 1, G%nj ; do i = 1, G%ni

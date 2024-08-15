@@ -5,7 +5,7 @@
 
 # HPC build
 FC=mpifort
-FCFLAGS=-acc
+FCFLAGS=-acc -Minfo=acc
 #FCFLAGS=-acc -gpu=managed
 LDFLAGS=-acc
 
